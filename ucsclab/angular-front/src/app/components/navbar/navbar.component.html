@@ -1,0 +1,74 @@
+<!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UCSC Laboratory</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav right">
+      <li *ngIf="loggedIn()" class="nav-item">
+        <a [routerLink]="['/profile']"><b>Profile</b></a>
+      </li>
+      <li *ngIf="!loggedIn()" class="nav-item" >
+        <a [routerLink]="['/login']"><b>Login</b></a>
+      </li>
+      <li *ngIf="!loggedIn()" class="nav-item" >
+        <a [routerLink]="['/register']"><b>Register</b></a>
+      </li>
+      <li *ngIf="loggedIn()" class="nav-item" >
+        <a href="#" (click)="logoutUser()"><b>Logout</b></a>
+      </li>
+     
+    </ul>
+  
+  </div>
+</nav> 
+-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#"><b>UCSC Lab Reservation System</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navbar-right" id="navbarColor01" >
+    <ul class="navbar-nav mr-auto">
+        <li *ngIf="adminLogin()" class="nav-item">
+            <a class="nav-link" href="#" [routerLink]="['/adminResv']" ><b><h4>Resv(A)</h4></b></a>
+          </li>
+          <li *ngIf="adminLogin()" class="nav-item">
+              <a class="nav-link" href="#" [routerLink]="['/adminLabs']" ><b><h4>Labs(A)</h4></b></a>
+            </li>
+            <li *ngIf="adminLogin()" class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['/addLab']" ><b><h4>Add</h4></b></a>
+              </li>
+
+
+       <!-- <li *ngIf="adminLogin()" class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="" ><b><h4>Admin Dashboard</h4></b></a>
+        </li> -->
+      
+      <li *ngIf="loggedIn()" class="nav-item">
+        <a class="nav-link" href="#" [routerLink]="['/labs']" style="margin-left: 500px"><b><h4>Laboratories</h4></b></a>
+      </li>
+      <li *ngIf="loggedIn()" class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/reservationsList']" ><b><h4>Reservations</h4></b></a>
+      </li>
+
+    <!-- <li *ngIf="adminLogin()" class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="" ><b><h4>Admin Dashboard</h4></b></a>
+        </li> -->
+      <li *ngIf="!loggedIn()" class="nav-item">
+        <a class="nav-link" href="#" [routerLink]="['/register']" style="margin-left: 700px"><b><h4>Registration</h4></b></a>
+      </li>
+      <li *ngIf="!loggedIn()" class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']"><b><h4>Login</h4></b></a>
+      </li>
+      <li *ngIf="loggedIn()" class="nav-item">
+        <a class="nav-link" href="#" (click)="logoutUser()"><b><h4>Logout</h4></b></a>
+      </li>
+     
+    </ul>
+  
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+
+<div class="panel panel-default">
+  <div class="panel-head" style="margin-left: 450px;margin-bottom: 20px"><h1>Lab Reservation</h1> </div>
+	<div class="panel-body">
+		<form (submit)="makeReservation()">
+   
+    <div class="form-group">
+      <label for="venue">Date</label>
+      <input type="date" class="form-control" id="venue" name="date" [(ngModel)]="date">
+    </div>
+   
+    
+    <div class="form-group">
+      <label for="correspondantId">From</label>
+      <input type="time" class="form-control" id="correspondantId" name="timefrom" [(ngModel)]="timefrom" >
+    </div>
+    <div class="form-group">
+      <label for="correspondantId">To</label>
+      <input type="time" class="form-control" id="correspondantId" name="timeto" [(ngModel)]="timeto" >
+    </div>
+    <div class="form-group">
+      <label for="name">Reason</label>
+      <input type="text" class="form-control" id="title" name="reason" [(ngModel)]="reason">
+    </div>
+    <button type="submit" style="color:#01080a;" class="btn btn-success">Add</button>
+    <a  class="btn btn-default"> Cancel</a>
+</form> 	
+
+</div>
+</div>

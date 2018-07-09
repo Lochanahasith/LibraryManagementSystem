@@ -1,0 +1,31 @@
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+	
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+			  <th>Lab name</th>
+			  <th>Building</th>
+			  <th>Capacity</th>
+			  <th>Action</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr *ngFor ="let item of this.labdata">
+			  <td>{{ item.lab }}</td>
+			  <td>{{ item.building }}</td>
+			  <td>{{ item.capacity }}</td>
+
+			  <td> 
+			
+			 <a  class="btn btn-success" [routerLink]="['/reservation/'+item.lab]"> Make reservation </a>
+				
+			  </td>
+			</tr>
+			</tbody>
+		</table>		
+    <div>
+<div>

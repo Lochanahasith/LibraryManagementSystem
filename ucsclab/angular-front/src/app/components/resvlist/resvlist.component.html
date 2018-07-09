@@ -1,0 +1,48 @@
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+	
+	</div>
+	
+
+	<div class="panel-body">
+
+			<form class="navbar-form navbar-right" style="margin-right:110px;margin-bottom: 25px" role="search">
+					<div class="form-group">
+					  <input type="text" class="form-control" placeholder="YYYY-MM-DD" name="searchString" [(ngModel)]="searchString">
+					</div>
+					<button type="submit" class="btn btn-default">Search</button>
+				  </form>
+		<table class="table table-striped">
+				
+			<thead>
+			<tr>
+			  <th>Lab</th>
+			  <th>Date</th>
+			  <th>Start time</th>
+			  <th>End time</th>
+			  <th>Reason</th>
+			</tr>
+			</thead>
+			<tbody>
+		<!--		<tr *ngFor ="let item of this.data"> -->
+					<tr  *ngFor="let item of this.data | filter : 'date' : searchString; let i = index">
+				  <td>{{item.lab}}</td>
+					<td>{{ item.date }}</td>
+					<td>{{ item.timefrom }}</td>
+					<td>{{ item.timeto }}</td>
+					<td>{{item.reason}}</td>
+	
+					<td> 
+					 <!-- <a href="#/news1/{{news._id}}/show" class="btn btn-success"> Make reservasion </a> -->
+					
+					<!-- <a  class="btn btn-danger" style="margin-left: 10px"> Delete </a> -->
+					
+					</td>
+				</tr>
+		<!--		<a  class="btn btn-danger" style="margin-left: 10px" (click)="download();"> Generate Report</a>	 -->
+			</tbody>
+		</table>
+	<!--	<a  class="btn btn-info" style="margin-left: 10px">Generate Reports </a>	-->
+    <div>
+<div>
